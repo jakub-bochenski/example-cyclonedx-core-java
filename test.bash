@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -euxo pipefail
 
 ./mvnw clean compile -Psbom -q
 jq '.components[0].licenses[0].license' target/bom.json
